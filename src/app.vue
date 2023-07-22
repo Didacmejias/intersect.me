@@ -1,6 +1,10 @@
 <template>
   <main class="main">
-    <RouterView />
+    <router-view v-slot="{ Component, route }">
+      <transition :name="route.meta.transition">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
   </main>
 </template>
 

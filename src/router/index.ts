@@ -8,12 +8,14 @@ const router = createRouter({
     {
       path: ROUTE_PATH.home,
       name: ROUTE_NAME.home,
-      component: () => import('@/app/isc-app/isc-app.vue')
+      component: () => import('@/app/isc-app/isc-app.vue'),
+      meta: { transition: 'slide-right' },
     },
     {
       path: ROUTE_PATH.generator,
       name: ROUTE_NAME.generator,
       component: () => import('@/app/generator'),
+      meta: { transition: 'slide-left' },
       beforeEnter: (to, from, next) => {
         const {
           character: { nickname }
