@@ -1,6 +1,7 @@
 <template>
   <nav class="nav nav__container">
-    {{ nickname }}
+    <span>You are playing as:</span>
+    <span class="nav__nickname">{{ nickname }}</span>
   </nav>
 </template>
 

@@ -1,5 +1,11 @@
 .nav{
+    font-family: "Bobaland", Arial, Helvetica, sans-serif;
+
     &__container{
-        @apply p-6 bg-slate-500
+        @apply flex gap-2 justify-center items-center text-3xl p-6 bg-slate-500 h-[10%];
+    }
+
+    &__nickname{
+        @apply text-amber-200;
     }
 }

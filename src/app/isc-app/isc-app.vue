@@ -1,6 +1,6 @@
 <template>
-  <main class="main main__container">
-    <h1 class="main__title">Intersect me!</h1>
+  <section class="section section__container">
+    <h1 class="section__title">Intersect me!</h1>
     <div class="form form__container">
       <input
         class="form__input"
@@ -14,7 +14,7 @@
       <label v-else class="form__label">Enter your nickname to start the game</label>
       <button :type="BUTTON_TYPE.button" @click="onClick">Start!</button>
     </div>
-  </main>
+  </section>
 </template>
 
 <script setup lang="ts">

@@ -8,7 +8,10 @@ export const useCharacter = defineStore('character', () => {
   })
 
   const setNickname = (name: string) => {
-    character.value.nickname = name
+    const nameParsed = name
+      .toLowerCase()
+      .replace(/\w/, firstLetter => firstLetter.toUpperCase());
+    character.value.nickname = nameParsed
   }
 
   return { character, setNickname }

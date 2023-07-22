@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <main class="main">
     <RouterView />
-  </div>
+  </main>
 </template>
+
+<style lang="scss" scoped>
+@import url('./app.scss');
+</style>

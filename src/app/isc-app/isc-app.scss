@@ -1,6 +1,6 @@
-.main{
+.section{
     &__container{
-        @apply flex flex-col gap-6 justify-center items-center w-screen h-screen bg-gray-900 text-white; 
+        @apply flex flex-col gap-6 justify-center items-center w-screen h-screen; 
     }
 
     &__title{
@@ -11,15 +11,15 @@
 
 .form{
     &__container{
-        @apply flex flex-col gap-2 p-6 w-full md:w-6/12 lg:w-3/12 xl:w-2/12
+        @apply flex flex-col gap-2 p-6 w-full md:w-6/12 lg:w-3/12 xl:w-2/12;
     }
     &__input{
         @apply p-2 text-gray-900 outline w-full;
         &--is-error{
-            @apply outline outline-1 outline-offset-2 outline-red-500
+            @apply outline outline-1 outline-offset-2 outline-red-500;
         }
     }
     &__label{
-        @apply text-xs
+        @apply text-xs;
     }
 }
