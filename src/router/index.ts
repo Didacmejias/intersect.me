@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { ROUTE_NAME, ROUTE_PATH } from './enums'
+import { useCharacter } from '@/stores/character'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,7 +13,15 @@ const router = createRouter({
     {
       path: ROUTE_PATH.generator,
       name: ROUTE_NAME.generator,
-      component: () => import('@/app/generator')
+      component: () => import('@/app/generator'),
+      beforeEnter: (to, from, next) => {
+        const {
+          character: { nickname }
+        } = useCharacter()
+      
+        if(!nickname) next(ROUTE_PATH.home)
+        else next()
+      }
     },
   ]
 })
