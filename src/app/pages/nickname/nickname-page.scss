@@ -22,4 +22,8 @@
     &__label{
         @apply text-xs;
     }
+
+    &__button{
+        @apply p-2 rounded bg-green-600;
+    }
 }

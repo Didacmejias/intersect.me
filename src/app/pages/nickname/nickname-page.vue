@@ -12,7 +12,7 @@
       />
       <label v-if="error" class="form__label">{{ error }}</label>
       <label v-else class="form__label">Enter your nickname to start the game</label>
-      <button :type="BUTTON_TYPE.button" @click="onClick">Start!</button>
+      <button class="form__button" :type="BUTTON_TYPE.button" @click="onSubmit">Start!</button>
     </div>
   </section>
 </template>
@@ -25,10 +25,11 @@ import { ROUTE_NAME } from '@/router/enums'
 import { useCharacter } from '@/stores/character'
 
 const router = useRouter()
-const { nickname, error, validateInput } = useInput()
+const { nickname, error, isLiveValidation, validateInput } = useInput()
 const { setNickname } = useCharacter()
 
-const onClick = () => {
+const onSubmit = () => {
+  if (!isLiveValidation.value) isLiveValidation.value = true
   validateInput(nickname.value)
   if (!error.value) {
     setNickname(nickname.value)
