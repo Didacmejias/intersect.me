@@ -1,5 +1,5 @@
 .generator{
     &__container{
-        @apply h-[90%];
+        @apply flex flex-col justify-center items-center h-[90%];
     }
 }
