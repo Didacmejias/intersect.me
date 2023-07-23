@@ -38,5 +38,5 @@ const onClick = () => {
 </script>
 
 <style lang="scss" scoped>
-@import url('./isc-app.scss');
+@import url('./nickname-page.scss');
 </style>

@@ -1,14 +1,14 @@
 <template>
-  <ISCNavbar />
+  <GeneratorNavbar />
   <section class="generator generator__container">Text</section>
 </template>
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
 
-const ISCNavbar = defineAsyncComponent(() => import('./components/isc-navbar.vue'))
+const GeneratorNavbar = defineAsyncComponent(() => import('./components/generator-navbar'))
 </script>
 
 <style scoped>
-@import url('./char-generator.scss');
+@import url('./generator-page.scss');
 </style>

@@ -14,5 +14,5 @@ const {
 </script>
 
 <style scoped>
-@import url('./isc-navbar.scss');
+@import url('./generator-navbar.scss');
 </style>
