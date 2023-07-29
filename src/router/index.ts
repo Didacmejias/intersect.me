@@ -8,7 +8,7 @@ const router = createRouter({
     {
       path: ROUTE_PATH.home,
       name: ROUTE_NAME.home,
-      component: () => import('@/app/pages/nickname'),
+      component: () => import('@/app/pages/nickname')
     },
     {
       path: ROUTE_PATH.generator,
@@ -18,11 +18,19 @@ const router = createRouter({
         const {
           character: { nickname }
         } = useCharacter()
-      
-        if(!nickname) next(ROUTE_PATH.home)
+
+        if (!nickname) next(ROUTE_PATH.home)
         else next()
-      }
-    },
+      },
+      redirect: ROUTE_PATH.firstStep,
+      children: [
+        {
+          path: ROUTE_PATH.firstStep,
+          name: ROUTE_NAME.firstStep,
+          component: () => import('@/app/pages/generator/steps/first-step')
+        }
+      ]
+    }
   ]
 })
 

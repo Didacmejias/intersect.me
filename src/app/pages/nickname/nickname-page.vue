@@ -1,5 +1,5 @@
 <template>
-  <section class="section section__container">
+  <section class="section">
     <h1 class="section__title">Intersect me!</h1>
     <div class="form form__container">
       <input
@@ -23,16 +23,17 @@ import { INPUT_TYPE, BUTTON_TYPE } from '@/app/shared/enums'
 import { useInput } from './useInput'
 import { ROUTE_NAME } from '@/router/enums'
 import { useCharacter } from '@/stores/character'
+import { Step } from '@/stores/types'
 
 const router = useRouter()
 const { nickname, error, isLiveValidation, validateInput } = useInput()
-const { setNickname } = useCharacter()
+const { setCharacter } = useCharacter()
 
 const onSubmit = () => {
   if (!isLiveValidation.value) isLiveValidation.value = true
   validateInput(nickname.value)
   if (!error.value) {
-    setNickname(nickname.value)
+    setCharacter({ name: nickname.value, step: Step.first })
     router.push({ name: ROUTE_NAME.generator })
   }
 }

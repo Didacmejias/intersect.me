@@ -1,7 +1,5 @@
 .section{
-    &__container{
-        @apply flex flex-col gap-6 justify-center items-center w-screen h-screen; 
-    }
+    @apply flex flex-col gap-6 justify-center items-center w-screen h-screen; 
 
     &__title{
         font-size: 5rem;

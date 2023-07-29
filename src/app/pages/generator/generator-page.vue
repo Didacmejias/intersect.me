@@ -1,6 +1,12 @@
 <template>
   <GeneratorNavbar />
-  <section class="generator generator__container">Text</section>
+  <section class="generator">
+    <router-view v-slot="{ Component, route }">
+      <transition name="fade">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
+  </section>
 </template>
 
 <script setup lang="ts">

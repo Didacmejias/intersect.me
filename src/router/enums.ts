@@ -1,9 +1,11 @@
 export enum ROUTE_PATH {
     home = '/',
-    generator = '/generator'
+    generator = '/generator',
+    firstStep = '/first-step'
 }
 
 export enum ROUTE_NAME {
     home = 'home',
-    generator = 'generator'
+    generator = 'generator',
+    firstStep = 'first-step'
 }
