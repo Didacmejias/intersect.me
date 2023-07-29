@@ -12,7 +12,7 @@ export const useCharacter = defineStore('character', () => {
     const nameParsed = name
       .trim()
       .toLowerCase()
-      .replace(/\w/, firstLetter => firstLetter.toUpperCase());
+      .replace(/\w/, (firstLetter) => firstLetter.toUpperCase())
     character.value.nickname = nameParsed
   }
 
@@ -20,7 +20,7 @@ export const useCharacter = defineStore('character', () => {
     character.value.step = step
   }
 
-  const setCharacter = ({name, step}: {name: string, step: number}) => {
+  const setCharacter = ({ name, step }: { name: string; step: number }) => {
     setNickname(name)
     setStep(step)
   }

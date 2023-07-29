@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { ROUTE_NAME, ROUTE_PATH } from './enums'
-import { useCharacter } from '@/stores/character'
+import { hasCharacter } from './middleware'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -14,14 +14,6 @@ const router = createRouter({
       path: ROUTE_PATH.generator,
       name: ROUTE_NAME.generator,
       component: () => import('@/app/pages/generator'),
-      beforeEnter: (to, from, next) => {
-        const {
-          character: { nickname }
-        } = useCharacter()
-
-        if (!nickname) next(ROUTE_PATH.home)
-        else next()
-      },
       redirect: ROUTE_PATH.firstStep,
       children: [
         {
@@ -33,5 +25,7 @@ const router = createRouter({
     }
   ]
 })
+
+router.beforeEach(hasCharacter)
 
 export default router

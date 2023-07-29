@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 @font-face {
-font-family: "Bobaland";
-src: local("Bobaland"),
-    url(./fonts/bobaland.ttf) format("truetype");
+  font-family: 'Bobaland';
+  src:
+    local('Bobaland'),
+    url(./fonts/bobaland.ttf) format('truetype');
 }
 
-body{
-    overflow: hidden;
+body {
+  overflow: hidden;
 }

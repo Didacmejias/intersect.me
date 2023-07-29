@@ -1,3 +1,3 @@
-import NicknamePage from "./nickname-page.vue"
+import NicknamePage from './nickname-page.vue'
 
 export default NicknamePage

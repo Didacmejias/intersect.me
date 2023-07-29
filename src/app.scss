@@ -1,14 +1,13 @@
-.main{
-    @apply w-screen h-screen bg-gray-900 text-white;
+.main {
+  @apply w-screen h-screen bg-gray-900 text-white;
 
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: opacity 1s ease;
-    }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 1s ease;
+  }
 
-    .fade-enter-from,
-    .fade-leave-to {
-        opacity: 0;
-    }
-
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
 }

@@ -12,9 +12,9 @@ export const useInput = () => {
   const isLiveValidation: Ref<boolean> = ref(false)
 
   const validateInput = (value: string) => {
-    if(!isLiveValidation.value) return
+    if (!isLiveValidation.value) return
     if (!value) error.value = ERRORS.required
-    else if(!value.match('^[a-zA-Z]+(?:s+[a-zA-Z]+)*$')) error.value = ERRORS.regex
+    else if (!value.match('^[a-zA-Z]+(?:s+[a-zA-Z]+)*$')) error.value = ERRORS.regex
     else if (value.length < 3 || value.length > 15) error.value = ERRORS.length
     else error.value = ''
   }
