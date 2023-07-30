@@ -1,5 +1,7 @@
 <template>
-  <div>First Step</div>
+  <div>
+    <div>First Step</div>
+  </div>
 </template>
 
 <script setup lang="ts"></script>
