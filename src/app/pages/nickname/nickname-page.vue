@@ -23,7 +23,6 @@ import { INPUT_TYPE, BUTTON_TYPE } from '@/app/shared/enums'
 import { useInput } from './useInput'
 import { ROUTE_NAME } from '@/router/enums'
 import { useCharacter } from '@/stores/character'
-import { Step } from '@/stores/types'
 
 const router = useRouter()
 const { nickname, error, isLiveValidation, validateInput } = useInput()
@@ -33,7 +32,7 @@ const onSubmit = () => {
   if (!isLiveValidation.value) isLiveValidation.value = true
   validateInput(nickname.value)
   if (!error.value) {
-    setCharacter({ name: nickname.value, step: Step.first })
+    setCharacter({ name: nickname.value })
     router.push({ name: ROUTE_NAME.generator })
   }
 }

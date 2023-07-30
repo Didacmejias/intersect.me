@@ -20,7 +20,7 @@ export const useCharacter = defineStore('character', () => {
     character.value.step = step
   }
 
-  const setCharacter = ({ name, step }: { name: string; step: number }) => {
+  const setCharacter = ({ name, step = Step.first }: { name: string; step?: number }) => {
     setNickname(name)
     setStep(step)
   }
