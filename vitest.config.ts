@@ -16,7 +16,7 @@ export default mergeConfig(
       },
       coverage: {
         all: true,
-        reporter: ['html']
+        reporter: ['html', 'lcov']
       }
     }
   })
