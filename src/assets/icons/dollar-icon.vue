@@ -25,7 +25,7 @@
   </svg>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useCharacter } from '@/stores/character'
 
 const { getMoneyPercent } = useCharacter()
