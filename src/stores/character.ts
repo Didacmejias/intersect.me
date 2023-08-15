@@ -6,12 +6,16 @@ export const useCharacter = defineStore('character', () => {
   const character: Ref<Character> = ref({
     nickname: '',
     step: Step.initial,
-    moneyPercent: 0,
-    socialPercent: 0
+    moneyPercent: 20,
+    socialPercent: 40,
+    wellbeingPercent: 60,
+    statusPercent: 80
   })
 
   const getMoneyPercent = computed(() => 100 - character.value.moneyPercent)
   const getSocialPercent = computed(() => 100 - character.value.socialPercent)
+  const getWellbeingPercent = computed(() => 100 - character.value.wellbeingPercent)
+  const getStatusPercent = computed(() => 100 - character.value.statusPercent)
 
   const setNickname = (name: string) => {
     const nameParsed = name
@@ -30,5 +34,12 @@ export const useCharacter = defineStore('character', () => {
     setStep(step)
   }
 
-  return { character, setCharacter, getMoneyPercent, getSocialPercent }
+  return {
+    character,
+    setCharacter,
+    getMoneyPercent,
+    getSocialPercent,
+    getWellbeingPercent,
+    getStatusPercent
+  }
 })

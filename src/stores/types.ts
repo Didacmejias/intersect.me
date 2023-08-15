@@ -3,6 +3,8 @@ export interface Character {
   step: Step
   moneyPercent: number
   socialPercent: number
+  wellbeingPercent: number
+  statusPercent: number
 }
 
 export enum Step {
